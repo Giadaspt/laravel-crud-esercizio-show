@@ -1,0 +1,16 @@
+.body {
+  background-color: $indigo;
+}
+
+.row {
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.pasta_view {
+  width: 10%;
+  img {
+    width: 100%;
+  }
+}
