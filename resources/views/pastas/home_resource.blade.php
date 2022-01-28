@@ -25,13 +25,16 @@
             </td>
             <td>
               <button class="btn btn-warning">
-                <a href="">Edit</a>
+                <a href="{{ route('pastas.edit', $pasta) }}">Edit</a>
               </button>
             </td>
             <td>
-              <button class="btn btn-danger">
-                <a href="">Delete</a>
-              </button>
+              <form action="{{ route('pastas.destroy', $pasta) }}" method="POST">
+                @csrf
+                @method('DELETE')
+
+                <input class="bg-danger p-3" type="submit" value="Delete">
+              </form>
             </td>
           </tr>
         @endforeach
